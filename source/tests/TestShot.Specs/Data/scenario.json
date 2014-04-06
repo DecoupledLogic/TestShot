@@ -1,0 +1,50 @@
+{
+  "DummyBrowser": null,
+  "ErrorLog": [],
+  "IsBaseline": false,
+  "OverrideScreenshots": true,
+  "RunTime": 0,
+  "ScenarioEnd": "2014-02-25T14:21:34.4926382-05:00",
+  "ScenarioLog": [
+    "Scenario Created: 2/25/2014 2:21:02 PM",
+    "Test Page Opened: http://localhost/testpipe.testsite/testshot.html",
+    "Injecting BigBrother",
+    "BigBrother Injected",
+    "Scenario End."
+  ],
+  "ScenarioStart": "2014-02-25T14:21:02.8986382-05:00",
+  "ScenarioVersion": "1",
+  "Screenshots": 1,
+  "ScreenshotsBaseline": 0,
+  "ScreenshotsPath": "C:\\_Automation\\Test\\source\\application\\TestShot\\Test+App\\28a4d919-e440-4b91-9d2e-129677a33105\\FireFox\\ver1\\ver1\\screenshots",
+  "Steps": [
+    {
+      "Action": 0,
+      "Element": null,
+      "Key": null,
+      "LivePlayback": false,
+      "Note": null,
+      "PauseMilliseconds": 0,
+      "Timestamp": "2014-02-25T14:21:30.7456382-05:00",
+      "X": 0,
+      "Y": 0
+    }
+  ],
+  "TestRecordingId": "28a4d919-e440-4b91-9d2e-129677a33105",
+  "BrowserType": 3,
+  "Directory": "C:\\_Automation\\Test\\source\\application\\TestShot\\Test+App\\28a4d919-e440-4b91-9d2e-129677a33105\\FireFox\\ver1",
+  "EnvironmentUrl": "http://localhost/testpipe.testsite/",
+  "FileContent": null,
+  "FilePath": "C:\\_Automation\\Test\\source\\application\\TestShot\\Test+App\\28a4d919-e440-4b91-9d2e-129677a33105\\FireFox\\ver1\\ver1\\scenario.json",
+  "IsSecure": false,
+  "IsSkipped": false,
+  "Name": "Test Scenario",
+  "OpenDummy": false,
+  "Tags": [],
+  "VersionPath": "C:\\_Automation\\Test\\source\\application\\TestShot\\Test+App\\28a4d919-e440-4b91-9d2e-129677a33105\\FireFox\\ver1\\ver1",
+  "DateSaved": "0001-01-01T00:00:00",
+  "TestUrl": "http://localhost/testpipe.testsite/testshot.html",
+  "TestVirtualUrl": "testshot.html",
+  "Id": "0a0149b7-b818-441e-a0fe-a628eedebb04",
+  "DateCreated": "0001-01-01T00:00:00"
+}

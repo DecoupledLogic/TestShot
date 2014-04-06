@@ -1,0 +1,5 @@
+﻿Application Name = Test App
+Environment Root Url = localhost/testpipe.testsite/
+Virtual Url = testshot.html
+Browser = f
+Scenario Name = Test Scenario
