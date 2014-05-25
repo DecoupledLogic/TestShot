@@ -33,7 +33,7 @@ Contact
 If you have any questions, requests, comments, or criticisms, submit a ticket on 
 the TestPipe issue tracker - https://github.com/DecoupledLogic/TestShot/issues.
 
-* Project Site -  http://testpipe.github.io/DecoupledLogic/TestShot
+* Project Site -  http://decoupledlogic.github.io/TestShot
 
 License
 -------
