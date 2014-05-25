@@ -39,7 +39,7 @@ License
 -------
 
 TestShot is released under GPL v3 and the license can be found in the file named
-license - https://github.com/TestShot/TestShot/blob/master/license.txt.
+license - https://github.com/DecoupledLogic/TestShot/blob/master/license.txt.
 
 Copyright
 ---------
