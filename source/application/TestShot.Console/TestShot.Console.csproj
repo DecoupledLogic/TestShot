@@ -41,6 +41,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
@@ -69,13 +72,36 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TestPipe.Assertions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.Assertions.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.Common.dll</HintPath>
+    </Reference>
     <Reference Include="TestPipe.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Core.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.NPoco">
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.NPoco.dll</HintPath>
     </Reference>
     <Reference Include="TestPipe.Runner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Runner.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Runner.1.0.0\lib\net40\TestPipe.Runner.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.39.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Selenium.WebDriver.2.39.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.39.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Selenium.Support.2.39.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -91,10 +117,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Plugins\Browsers\TestPipe.Selenium.dll" />
     <Content Include="test.txt" />
   </ItemGroup>
   <ItemGroup>

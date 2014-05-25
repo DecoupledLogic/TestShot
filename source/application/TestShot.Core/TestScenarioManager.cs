@@ -25,6 +25,20 @@
 			}
 		}
 
+		//TODO: Move to seperate interfaced serialization class
+		public static TestScenario JsonDeserializeScenario(string json)
+		{
+			TestScenario scenario = JsonConvert.DeserializeObject<TestScenario>(json);
+			return scenario;
+		}
+
+		//TODO: Move to seperate interfaced serialization class
+		public static string JsonSerializeScenario(TestScenario scenario)
+		{
+			string json = JsonConvert.SerializeObject(scenario, Formatting.Indented);
+			return json;
+		}
+
 		public TestScenario Create(TestRecording recording, string scenarioVersion, bool validate)
 		{
 			TestScenario scenario = GetScenarioFromTestRecording(recording);
@@ -69,20 +83,6 @@
 		private static bool IsValidAction(Action action)
 		{
 			return TestScenarioManager.ActionsAllowed.Contains(action);
-		}
-
-		//TODO: Move to seperate interfaced serialization class
-		public static TestScenario JsonDeserializeScenario(string json)
-		{
-			TestScenario scenario = JsonConvert.DeserializeObject<TestScenario>(json);
-			return scenario;
-		}
-
-		//TODO: Move to seperate interfaced serialization class
-		public static string JsonSerializeScenario(TestScenario scenario)
-		{
-			string json = JsonConvert.SerializeObject(scenario, Formatting.Indented);
-			return json;
 		}
 
 		//TODO: Move to seperate interfaced file manager class

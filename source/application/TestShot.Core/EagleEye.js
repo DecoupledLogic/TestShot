@@ -1,4 +1,4 @@
-﻿try to get id if not found get xpath
+﻿//try to get id if not found get xpath
 //Basically a copy of Huxley BigBrother
 (function () {
 	/* global window */

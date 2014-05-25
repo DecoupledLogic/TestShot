@@ -80,11 +80,18 @@
     <Reference Include="System.Drawing" />
     <Reference Include="TestPipe.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Common.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Common.dll</HintPath>
     </Reference>
     <Reference Include="TestPipe.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Core.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.NPoco">
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.NPoco.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver, Version=2.39.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -109,6 +116,7 @@
   <ItemGroup>
     <Compile Include="ImageProcessorSpecs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestHelper.cs" />
     <Compile Include="TestScenarioManagerSpecs.cs" />
     <Compile Include="TestRunnerSpecs.cs" />
     <Compile Include="TestRecorderSpecs.cs" />
@@ -135,7 +143,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Data\record.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

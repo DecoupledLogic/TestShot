@@ -21,8 +21,8 @@
 		[TestInitialize]
 		public void Setup()
 		{
-			this.recording = this.GetTestRecording();
-			this.scenario = this.GetTestScenario(this.recording);
+			this.recording = TestHelper.GetTestRecording();
+			this.scenario = TestHelper.GetTestScenario(this.recording);
 			this.sut = new TestRecorder();
 		}
 
@@ -86,29 +86,6 @@
 			TestStep steps = JsonConvert.DeserializeObject<TestStep>(json, new IsoDateTimeConverter());
 
 			Assert.IsNotNull(steps);
-		}
-
-		private TestRecording GetTestRecording()
-		{
-			TestRecording recording = new TestRecording();
-			recording.AppName = "Test App";
-			recording.AppVersion = "1.0.0";
-			recording.BrowserType = BrowserTypeEnum.FireFox;
-			recording.Name = "Test Scenario";
-			recording.OpenDummy = true;
-			recording.ScreenSize = Constants.DefaultSize;
-			recording.EnvironmentUrl = "localhost/testpipe.testsite/";
-			recording.TestVirtualUrl = "testshot.html";
-			recording.Id = Guid.NewGuid();
-			recording = TestRecordingManager.ResetTestRecording(recording, "1");
-			return recording;
-		}
-
-		private TestScenario GetTestScenario(TestRecording recording)
-		{
-			TestScenarioManager manager = new TestScenarioManager();
-			TestScenario scenario = manager.Create(recording, "1", false);
-			return scenario;
 		}
 	}
 }

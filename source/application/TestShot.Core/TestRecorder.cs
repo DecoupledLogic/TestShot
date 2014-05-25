@@ -36,6 +36,11 @@
 			screenshotSteps = screenshotSteps.ToList().OrderBy(x => x.Timestamp).ToList();
 			TestStep lastScreenshot = screenshotSteps.LastOrDefault(x => x.Action == Action.Screenshot);
 
+			if (lastScreenshot == null)
+			{
+				return screenshotSteps;
+			}
+
 			List<TestStep> results = screenshotSteps.Where(x => x.Timestamp <= lastScreenshot.Timestamp).ToList();
 
 			return results;
@@ -208,7 +213,7 @@
 
 			if (steps.Count < 1)
 			{
-				throw new Exception("No steps returned by BigBroher.");
+				throw new Exception("No steps returned by EagleEye.");
 			}
 
 			return steps;
@@ -217,7 +222,7 @@
 		private TestScenario InjectEagleEye(TestScenario scenario)
 		{
 			scenario.ScenarioLog.Add("Injecting EagleEye");
-			string path = Path.Combine(ConfigurationManager.AppSettings["TestShot.rootpath"], "EagleEye.js");
+			string path = ConfigurationManager.AppSettings["TestShot.eagleeye"];
 			FileInfo file = new FileInfo(path);
 
 			if (file.Exists == false)

@@ -15,6 +15,14 @@
 	[TestClass]
 	public class TestRunnerSpecs
 	{
+		private TestRunner sut;
+
+		[TestInitialize]
+		public void TestSetup()
+		{
+			sut = new TestRunner();
+		}
+
 		[TestMethod]
 		public void TestMapping()
 		{
@@ -51,14 +59,25 @@
 			ISelect selector = new Select(FindByEnum.Id, "seeMe");
 			BaseControl button = new BaseControl(browser, selector);
 			button.Click();
-			TestRunner sut = new TestRunner();
 
 			sut.Click(browser, 45, 20);
-			object webElement = browser.ExecuteScript("return window._getHuxleyEvents();");
+			object webElement = browser.ExecuteScript("return window._getTestShotEvents();");
 			browser.Quit();
 			ReadOnlyCollection<object> list = webElement as ReadOnlyCollection<object>;
 
 			Assert.IsTrue(list.Count == 1);
+		}
+
+		[TestMethod]
+		public void TestRunnerRun()
+		{
+			TestRecording recording = TestHelper.GetTestRecording();
+
+			TestScenario scenario = TestHelper.GetTestScenario(recording);
+
+			sut.Run(scenario);
+
+
 		}
 	}
 }

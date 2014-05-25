@@ -83,15 +83,18 @@
     <Reference Include="System.Xml" />
     <Reference Include="TestPipe.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Common.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Common.dll</HintPath>
     </Reference>
     <Reference Include="TestPipe.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Core.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Core.dll</HintPath>
     </Reference>
-    <Reference Include="TestPipe.Selenium, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="TestPipe.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ref\TestPipe.1.0.0\TestPipe.Selenium.dll</HintPath>
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="TestPipe.NPoco">
+      <HintPath>..\..\..\packages\TestPipe.Core.1.0.0\lib\net40\TestPipe.NPoco.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver">
       <HintPath>..\..\..\packages\Selenium.WebDriver.2.39.0\lib\net40\WebDriver.dll</HintPath>
